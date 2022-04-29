@@ -70,13 +70,125 @@ switch (shift) {
 
 let movieGender = (prompt("Qual é o gênero do filme?")).toLowerCase()
 let ticketPrice = Number(prompt("Qual é o preço do ingresso filme?"))
+let snack = (prompt("Qual lanchinho você vai comer?"))
+
 
 if (movieGender === "fantasia" && ticketPrice < 15) {
     console.log("Bom filme!")
+    console.log(`Aproveite o seu ${snack}`)
+
 } 
 else {
     console.log("Escolha outro filme :(")
 }
+
+
+
+//DESAFIO 1 - Adicionado ao exercício anterior. 
+
+//DESAFIO 2 
+
+let fullName = prompt("Nome Completo:")
+let matchType = prompt ("Entre IN se o jogo for internacional, ou DO se o jogo for doméstico:")
+let matchStage = prompt("Entre a etapa do campeonato - SF (Semi-Final), DT (decisão terceiro lugar), ou FI (final)")
+let category = Number(prompt ("Entre a categoria do jogo - 1,2,3 ou 4:"))
+let ticketAmount = Number (prompt ("Quantidade de ingressos:"))
+let ticketType = null
+let price = null
+let totalPrice = null
+let currency = null
+
+//Essa parte do código define o preço de uma unidade de ingresso dependendo da etapa do jogo e categoria escolhidas anteriormente. 
+
+if (matchStage === "SF" && category === 1) {
+    price = 1320
+    console.log(price)
+}
+else if(matchStage === "DT" && category === 1) {
+    price = 660
+}
+else if(matchStage === "FI" && category === 1) {
+    price = 1980
+}
+else if (matchStage === "SF" && category === 2) {
+    price = 880
+}
+else if(matchStage === "DT" && category === 2) {
+    price = 440
+}
+else if(matchStage === "FI" && category === 2) {
+    price = 1320
+}
+else if (matchStage === "SF" && category === 3) {
+    price = 550
+}
+else if(matchStage === "DT" && category === 3) {
+    price = 330
+}
+else if(matchStage === "FI" && category === 3) {
+    price = 880
+}
+else if (matchStage === "SF" && category === 4) {
+    price = 2200
+}
+else if(matchStage === "DT" && category === 4) {
+    price = 170
+}
+else if(matchStage === "FI" && category === 4) {
+    price = 330
+}
+
+// Essa parte calcula o valor total a ser pago
+
+totalPrice = price*ticketAmount
+
+// Essa parte decide como será impresso o valor do ingresso, em reais ou dólares.
+
+let matchTypeMessage = null
+
+if (matchType === "DO") {
+    currency = "R$"
+    matchTypeMessage = "Nacional"
+} 
+else {
+    currency = "U$"
+    price = price / 4,1
+    matchTypeMessage = "Internacional"
+}
+
+// Essa parte define a mensagem impressa referente a etapa do jogo
+
+let matchStageMessage = null
+
+switch (matchStage) {
+    case "SF" :
+        matchStageMessage = "Semifinais"
+        break;
+    case "DT":
+        matchStageMessage = "Decisão do 3º lugar"
+        break;
+    case "FI":        
+        matchStageMessage = "Final"
+        break;
+    default : 
+    matchStageMessage = "Dados inválidos, atualize a página e tente novamente."   
+}
+
+
+
+// Essa parte do código imprime cada linha da saída
+
+console.log("---Dados da compra---")
+console.log(`Nome do cliente: ${fullName}`)
+console.log(`Tipo do jogo: ${matchTypeMessage}`)
+console.log(`Etapa do jogo: ${matchStageMessage}`)
+console.log(`Categoria: ${category}`)
+console.log(`Quantidade de Ingressos: ${ticketAmount}`)
+console.log(`---Valores---`)
+console.log(`Valor do Ingresso: ${currency} ${price}`)
+console.log(`Valor total: ${currency} ${totalPrice}`)
+
+
 
 
 
