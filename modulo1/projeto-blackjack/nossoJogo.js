@@ -1,4 +1,6 @@
-console.log("Boas vindas ao jogo de Blackjack!")
+//Esse bloco de código foi reutilizado e adaptado para a realização do desafio. 
+//Para comentários específicos sobre cada função e o seu funcionamento, olhar desafio.js
+console.log("Boas vindas ao jogo de Blackjack!") 
 
 function startGame() { 
    if(confirm("Quer iniciar uma nova rodada?")){
