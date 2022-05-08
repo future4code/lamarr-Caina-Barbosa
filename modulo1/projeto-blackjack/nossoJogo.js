@@ -1,15 +1,3 @@
-/**
- * EXEMPLO DE UTILIZAÇÃO DA 'comprarCarta'
- * 
- * 
-    const carta = comprarCarta(); // Sorteia uma carta. Por exemplo, o rei de ouros
-    
-    console.log(carta.texto) // imprime o texto da carta. Exemplo: "K♦️" (indica "K" de ouros)
-    console.log(carta.valor) // imprime o valor da carta (um número). Exemplo: 10 (dado que "K" vale 10)
- * 
- * 
- * 
- */
 console.log("Boas vindas ao jogo de Blackjack!")
 
 function startGame() { 
@@ -29,6 +17,7 @@ function startRound() {
    let playerPoints = cards[0][0].valor + cards[0][1].valor
    let cpuPoints = cards[1][0].valor + cards [1][1].valor
    showWinner(cards, defineResult(playerPoints, cpuPoints), playerPoints, cpuPoints)
+   startGame()
 }
 
 function drawCards() {
