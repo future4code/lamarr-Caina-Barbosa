@@ -161,12 +161,17 @@ function retornaPessoasNaoAutorizadas(pessoas) {
         }
     }
     return pessoasBarradas
-  
 }
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
-
+    for(cliente of contas){
+        for(i = 0; i < cliente.compras.length; i++){
+            cliente.saldoTotal -= cliente.compras[i]    
+        }
+        cliente.compras = []
+    }
+    return contas
 }
 
 // EXERCÍCIO 15A
