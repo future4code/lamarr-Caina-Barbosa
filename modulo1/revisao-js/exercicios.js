@@ -49,17 +49,37 @@ function retornaNumerosPares(array) {
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
- 
+    let arrayParesElevados = array.filter((numero) => numero % 2 === 0).map((numero) => numero * numero)
+    return  arrayParesElevados
 }
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
-  
+    let maxValue = array[0]
+        for (numeros of array){
+            if(numeros > maxValue){
+                maxValue = numeros    
+            }
+        }
+    return maxValue
 }
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
-
+    let array = []
+    if(num1 > num2){
+        array[0] = num1
+        array[1] = num2    
+    } else {
+        array[0] = num2
+        array[1] = num1  
+    }
+    let objeto = {
+        maiorNumero : array[0],
+        maiorDivisivelPorMenor : array[0] % array[1] === 0,
+        diferenca : array[0] - array[1] 
+    }
+    return objeto
 }
 
 // EXERCÍCIO 08
