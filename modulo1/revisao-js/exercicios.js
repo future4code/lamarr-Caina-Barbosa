@@ -176,7 +176,17 @@ function retornaContasComSaldoAtualizado(contas) {
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
-  
+    function compare( a, b ) {
+        if (a.nome < b.nome){
+            return -1;
+        }
+        if (a.nome > b.nome){
+            return 1;
+        }
+        return 0;
+    }  
+    let arrayOrdenado = consultas.sort(compare)
+    return arrayOrdenado
 }
 
 // EXERCÍCIO 15B
