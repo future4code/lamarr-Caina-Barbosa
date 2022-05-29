@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    }
+.top-nav{
+    background-color:rgb(148,174,186);
+    height: 120px;
+}
+.logo{
+    height: 100px;
+}
+
+.nav-links{
+    font-family: 'Montserrat' ;
+    font-style: bold;
+    text-align: center;
+    position:relative;
+    left: 20px;
+    bottom: 30px;
+    padding-left: 75px;
+    padding-right: 80px;
+    padding-top: 30px;
+    padding-bottom: 39px;
+    font-size: 45px;
+    color:white;
+    text-decoration: wavy;
+}
+
+.top-nav a:hover{
+
+    background-color: rgb(39, 136, 180);
+    height: 120px;
+    border:none;
+    color:black;
+}
+
+.left-panel{
+    background-color: rgb(228,209,185);
+    background-image: url("img/bio-bg.png");
+    width:50%;
+    height:807px;
+    background-image: "img/Logotipo.png";
+    float: left;
+    border-style: ridge;
+    padding-right: 7px;
+    display: inline;    
+}
+
+.left-panel:hover{
+    background-color: rgb(228,209,185, 0.8);    
+}
+
+
+.right-panel{
+    float:right;
+    background-color: rgba(189, 120, 36, 0.719);
+    right:20px;
+    width: 935px;
+    height:265px;
+    background-image: "img/Logotipo.png";
+    display: inline;
+    border-style:ridge;
+    border-left: 0px;
+}
+
+.left-panel a{
+    font-family: 'Montserrat' ;
+    font-style: bold;
+    text-decoration:wavy;
+    position:relative;
+    top: 320px;
+    left: 500px;
+    font-size: 70px;
+
+}
+.right-panel a{
+    font-family: 'Montserrat' ;
+    font-style: bold;
+    text-decoration:wavy;
+    position:relative;
+    top: 40%;
+    left: 35%;
+    font-size: 45px;
+    text-align:center;
+    color: rgb(127, 108, 91)
+}
