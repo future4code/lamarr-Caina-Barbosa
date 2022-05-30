@@ -10,6 +10,10 @@
     height: 100px;
 }
 
+body {
+    background-color: rgb(228, 209, 185)  ;
+}
+
 .nav-links{
     font-family: 'Montserrat' ;
     font-style: bold;
@@ -34,53 +38,176 @@
     color:black;
 }
 
-.left-panel{
-    background-color: rgb(228,209,185);
-    background-image: url("img/bio-bg.png");
-    width:50%;
-    height:807px;
-    background-image: "img/Logotipo.png";
-    float: left;
-    border-style: ridge;
-    padding-right: 7px;
-    display: inline;    
-}
-
-.left-panel:hover{
-    background-color: rgb(228,209,185, 0.8);    
-}
-
-
-.right-panel{
-    float:right;
-    background-color: rgba(189, 120, 36, 0.719);
-    right:20px;
-    width: 935px;
-    height:265px;
-    background-image: "img/Logotipo.png";
-    display: inline;
-    border-style:ridge;
-    border-left: 0px;
-}
-
-.left-panel a{
-    font-family: 'Montserrat' ;
-    font-style: bold;
-    text-decoration:wavy;
+.main-text{
+    text-align: center;
+    width: 1920px;
+    font-family: 'Montserrat';
     position:relative;
-    top: 320px;
-    left: 500px;
-    font-size: 70px;
+    top:35px;
+    line-height: 150%;
+    letter-spacing: 3px;
+}
+
+#avatar{
+    width:20%;
+    position:relative;
+    top:20px;
+    left:40%;
+}
+
+.bottom-nav {
+    background-color: rgb(129, 109, 92);
+    height: 280px;
+    position:relative;
+    top:60px;
+    width:1920px;
+}
+
+.bottom-nav img{
+    position: relative;
+    left: 105px;
+    right:105px;
+    width:10%;
+    padding-top: 30px;
+    padding-left:  105px;
+    padding-right: 105px;
 
 }
-.right-panel a{
-    font-family: 'Montserrat' ;
-    font-style: bold;
-    text-decoration:wavy;
+
+.bottom-nav a:hover{
+    color: rgb(80, 53, 39, 50%);
+}
+
+#my-bio-caption{
+    font-family:"Montserrat";
+    font-size: 35px;
+    position: relative;
+    left:225px;
+    margin-right:200px;
+    color: rgb(80, 53, 39);
+    display: inline;     
+
+}
+
+#experience-caption{
+    font-family:"Montserrat";
+    font-size: 35px;
+    position: relative;
+    left:195px;
+    padding-left:  125px;
+    color: rgb(80, 53, 39);
+    display: inline;     
+
+}
+
+#projects-caption{
+    font-family:"Montserrat";
+    font-size: 35px;
+    position: relative;
+    left:300px;
+    padding-left:  125px;
+
+    color: rgb(80, 53, 39);
+    display: inline;     
+
+}
+
+#hire-me-caption{
+    font-family:"Montserrat";
+    font-size: 35px;
+    position: relative;
+    left:420px;
+    padding-left:  125px;
+    color: rgb(80, 53, 39);
+    display: inline;     
+
+}
+
+
+
+
+#experience-icon{
+    padding-left: 135px;
+}                          
+
+#bio-graphics{
     position:relative;
-    top: 40%;
-    left: 35%;
-    font-size: 45px;
+    top:50px;
+    left:30px;
+    display:inline
+}
+
+#bio-h1{
+    display:inline;
+    position: absolute;
+    top:150px;
+    left:900px;
+    font-family:"Montserrat";
+}
+#bio-p{
+    display:inline;
+    position: absolute;
+    top:220px;
+    left:900px;
+    right:50px;
+    font-family:"Montserrat";
+    text-align: justify;
+    line-height: 50px;
+    font-size:20px;
+}
+
+p a {
+    text-decoration: underline;
+}
+
+p a:hover{
+    color: rgb(80, 53, 39);
+    font-style: italic;
+    text-decoration: underline;
+
+}
+
+.oneThird{
+    width:30%;
+    height:300px;
+    float:left;
+    margin:.5%;
+}
+
+.oneThird p{
+    text-align: center;
+}
+.oneThird img{
+    position:relative;
+    left: 150px;
+    text-align: center;
+    height:100%;
+}
+
+.secondThird{
+    width:30%;
+    height:300px;
+    float:left;
+    margin:.5%;
+    margin-top: 50px;
+}
+
+.secondThird img{
+    position:relative;
+    left: 150px;
+    text-align: center;
+    height:100%;
+}
+
+.secondThird p{
     text-align:center;
-    color: rgb(127, 108, 91)
+}
+
+
+
+
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
 }
