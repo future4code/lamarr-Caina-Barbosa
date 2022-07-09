@@ -8,15 +8,29 @@ import  icon from './img/icon.png'
 
 function App() {
 
-  const [arrayMensagens, setArrayMensagens] = useState([<Mensagem remetente = "João" texto = "Vamo dar um rolê?" />]);
+  const [arrayMensagens, setArrayMensagens] = useState([]);
   const [inputMensagem, setInputMensagem] = useState ("")
   const [inputRemetente, setInputRemetente] = useState ("")
 
 
   const handleInputRemetente = (e) =>  {
       setInputRemetente(e.target.value)
-      return console.log(inputRemetente)
+  }
 
+  const handleInputMensagem = (e) =>  {
+    setInputMensagem(e.target.value)
+}
+
+  const enviarMensagem = () => {
+    setArrayMensagens([...arrayMensagens, <Mensagem remetente = {inputRemetente} texto = {inputMensagem}/>])
+    setInputMensagem("")
+    setInputRemetente("")
+  }
+
+  const handleEnter = (e) => {
+    if (e.keyCode === 13) {
+      enviarMensagem();
+    }
   }
 
   
@@ -32,10 +46,10 @@ function App() {
           </MessagesBody>
           <MessageBox>
             <label>Remetente: </label>
-            <input   value = {inputRemetente} style = {{width:"15vw"}} ></input>
+            <input  onChange = {handleInputRemetente} value = {inputRemetente} style = {{width:"15vw"}} ></input>
             <label>Msg: </label>
-            <input value = {inputMensagem} style = {{width:"35vw"}}></input>
-            <button>Enviar Mensagem</button>
+            <input onKeyDown={handleEnter} onChange = {handleInputMensagem} value = {inputMensagem} style = {{width:"35vw"}}></input>
+            <button onClick = {enviarMensagem} >Enviar Mensagem</button>
           </MessageBox>
         </CenterBox>
         <SidebarStyle/>

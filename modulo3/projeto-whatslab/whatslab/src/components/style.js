@@ -46,7 +46,7 @@ export const Footer = styled.footer `
 export const MessagesBody = styled.div `
     width : 70vw;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: flex-start; 
     margin: 2vh;
     align-items: flex-start;
