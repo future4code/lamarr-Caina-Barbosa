@@ -77,6 +77,35 @@ export const MessageDisplay = styled.div `
     top: 6px;
     }     
 `
+
+export const UserMessageDisplay = styled.div `
+    background: #00bfb6;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-family: arial;
+    position:relative;
+    display:flex;
+    height: 25px;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    margin-left: auto;
+
+    :before {
+        content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid #00bfb6;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #00bfb6;
+    border-bottom: 10px solid transparent;
+    right: -19px;
+    top: 6px;
+    }     
+`
+
 export const Message = styled.p `
     color: #fff;
     
