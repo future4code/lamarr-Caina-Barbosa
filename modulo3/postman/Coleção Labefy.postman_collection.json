@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "4de422e4-4294-43ce-b555-564252239936",
+		"name": "Coleção Labefy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22377076"
+	},
+	"item": [
+		{
+			"name": "CreatePlaylist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "caina-perotti-lamarr",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Grime Brasil\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUsers",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "createUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "caina-perotti-lamarr",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Cainã\",\r\n    \"email\": \"caiperotti@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labenusers",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPlaylists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTrackToPlaylist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "caina-perotti-lamarr",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"result\": {\r\n        \"quantity\": \"5\",\r\n        \"tracks\": [ \r\n            {\r\n                \"id\": \"1\", \r\n                \"name\": \"Bonezin di Lado\", \r\n                \"artist\": \"Fleezus \",\r\n                \"url\": \"https://www.youtube.com/watch?v=rA4fRicj134\"\r\n            },\r\n                        {\r\n                \"id\": \"2\", \r\n                \"name\": \"VARONILH\", \r\n                \"artist\": \"VANDAL\",\r\n                \"url\": \"https://www.youtube.com/watch?v=x218aOEqPGA\"\r\n            },\r\n                        {\r\n                \"id\": \"3\", \r\n                \"name\": \"Welcome to the Baile (Pop Smoke Remix)\", \r\n                \"artist\": \"SD9\",\r\n                \"url\": \"https://www.youtube.com/watch?v=SPvobF6S3kc\"\r\n            },\r\n                        {\r\n                \"id\": \"4\", \r\n                \"name\": \"Bota a Cara no Beco\", \r\n                \"artist\": \"BIG BLLAKK ft. GRONE\",\r\n                \"url\": \"https://www.youtube.com/watch?v=-c-yp-EbQaQ\"\r\n            },\r\n                        {\r\n                \"id\": \"5\", \r\n                \"name\": \"DROGBA\", \r\n                \"artist\": \"03 Noxio\",\r\n                \"url\": \"https://www.youtube.com/watch?v=tDQRPOKhhJE\"\r\n            }\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "c49fa480-7db1-471b-b0e3-2a80f5f0ec14"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPlaylistTracks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "caina-perotti-lamarr",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "c49fa480-7db1-471b-b0e3-2a80f5f0ec14"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeTrackFromPlaylist",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "caina-perotti-lamarr",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks/:trackId",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks",
+						":trackId"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "c49fa480-7db1-471b-b0e3-2a80f5f0ec14"
+						},
+						{
+							"key": "trackId",
+							"value": "090f8a71-96dc-4216-8ef0-31c1272ca54b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchPlaylist",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
