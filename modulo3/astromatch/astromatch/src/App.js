@@ -2,11 +2,17 @@ import axios from 'axios';
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Profile } from './components/profile';
+import { Matches } from './components/matches';
 import './App.css';
+import { Header } from './components/style';
 
 function App() {
   const [control, setControl] = useState(0)
   const [profileObject, setProfileObject] = useState([])
+  const [curScreen, setCurScreen] = useState(0)
+  
+  
+
 
   useEffect(() => {profileCall()}, [control])
   
@@ -17,28 +23,41 @@ function App() {
 
   function profileCall () { 
     gptc_get.then((response) => {
-    setProfileObject([response.data])
-    console.log(profileObject)
-  }).catch((error) => {
-    alert("Algo deu errado... Erro:", error.data)
-  })
+      setProfileObject([response.data])
+    }).catch((error) => {
+      alert("Algo deu errado... Erro:", error.data)
+    })
   }
 
   const curProfile = profileObject.map(callbackProfile)
 
   function callbackProfile (object, index) {
-    return <Profile key = {index} profile = {object.profile} setControl = {setControl} control = {control}/>
+    return <Profile key = {index} profile = {object.profile} setControl = {setControl} control = {control} />
 
   }
-  
 
-  return (
-    <div className="App">
-      {curProfile}
+  function switchScreen () {
+    setCurScreen(!curScreen)
+  }
   
-    </div>
+  if(curScreen) {
+    return (
+      <div>
+      <Matches/>
+      <button onClick = {switchScreen} > Me mostre mais perfis! </button>
+      </div>
+    )
+  }else {
+    return (
+      <div className="App">
+        <Header>astroMatch</Header>
+        {curProfile}
+        <button onClick = {switchScreen} > Me mostre os meus matches </button>
     
-  );
+      </div>
+      
+    );
+  }
 }
 
 export default App;

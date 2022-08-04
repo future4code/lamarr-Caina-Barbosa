@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { Matches } from './matches';
+import { ProfileCard, ProfileDetails } from './style';
 
 
 export function Profile (props){
@@ -38,16 +40,20 @@ export function Profile (props){
             alert("Algo deu errado")
         })
     } 
+
+
     
     return (
-        <div>
+        <ProfileCard>
             <img src= {props.profile.photo} alt = {props.profile.photo_alt}/>
-            <h3>{props.profile.name}</h3>
-            <h4>{props.profile.age}</h4>
-            <p>{props.profile.bio}</p>
+            <ProfileDetails>
+                <span id = "name" >{props.profile.name},</span>
+                <span>{props.profile.age}</span>
+            </ProfileDetails>
+            <p>Bio: {props.profile.bio}</p>
             <button onClick={like}>Quero</button>
             <button onClick = {dislike}>Num Quero</button>
-        </div>
+        </ProfileCard>
 
     )
 }
