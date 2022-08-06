@@ -1,8 +1,10 @@
 import axios from 'axios';
 import React from 'react';
+import Heart from '../img/like.png'
+import X from '../img/dislike.png'
 import { useEffect, useState } from 'react';
 import { Matches } from './matches';
-import { ProfileCard, ProfileDetails } from './style';
+import { ProfileCard, ProfileDetails, MatchButtons, ProfilePic, BioText, ProfileToChoose } from './style';
 
 
 export function Profile (props){
@@ -44,16 +46,21 @@ export function Profile (props){
 
     
     return (
-        <ProfileCard>
-            <img src= {props.profile.photo} alt = {props.profile.photo_alt}/>
+        <ProfileToChoose>
+            <ProfilePic src= {props.profile.photo} alt = {props.profile.photo_alt}></ProfilePic>
             <ProfileDetails>
                 <span id = "name" >{props.profile.name},</span>
                 <span>{props.profile.age}</span>
             </ProfileDetails>
-            <p>Bio: {props.profile.bio}</p>
-            <button onClick={like}>Quero</button>
-            <button onClick = {dislike}>Num Quero</button>
-        </ProfileCard>
+            <BioText>
+                <span className="bio">Bio:</span>
+                <span>{props.profile.bio}</span>
+            </BioText>
+            <MatchButtons>
+                <img src={Heart} onClick={like}/>
+                <img src={X} onClick = {dislike}/>
+            </MatchButtons>
+        </ProfileToChoose>
 
     )
 }

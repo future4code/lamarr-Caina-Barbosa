@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { Profile } from './components/profile';
 import { Matches } from './components/matches';
 import './App.css';
-import { Header } from './components/style';
+import { FooterMatches, Header } from './components/style';
 
 function App() {
   const [control, setControl] = useState(0)
@@ -52,8 +52,7 @@ function App() {
       <div className="App">
         <Header>astroMatch</Header>
         {curProfile}
-        <button onClick = {switchScreen} > Me mostre os meus matches </button>
-    
+        <FooterMatches onClick = {switchScreen}>Clique Aqui Pra Ver Seus Matches</FooterMatches>    
       </div>
       
     );
