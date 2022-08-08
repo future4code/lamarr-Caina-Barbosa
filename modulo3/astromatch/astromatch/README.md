@@ -1,4 +1,4 @@
-# AstroMatch - Cainã Perotti [Surge Link]([url](http://cagey-alarm.surge.sh))
+# AstroMatch - Cainã Perotti [url](http://cagey-alarm.surge.sh))
 
 ## O que funciona
 
