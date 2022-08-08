@@ -8,10 +8,16 @@ export const Header = styled.header`
     padding-top: 2vh;
     font-style: italic;
     color:white;
+    @media (min-width: 500px) {
+        display: none;
+    }
 
 `
 
 export const ProfileCard = styled.div`
+    @media (min-width: 500px) {
+        display: none;
+    }
 
     img {
         object-fit: cover;
@@ -20,12 +26,18 @@ export const ProfileCard = styled.div`
     }
 `
 export const ProfilePic = styled.img`
+    @media (min-width: 500px) {
+        display: none;
+    }
     object-fit: cover;
     width: 100%;
     height: 55vh;
 `
 
 export const ProfileDetails = styled.div`
+    @media (min-width: 500px) {
+        display: none;
+    }
     display:flex;
     justify-content: left;
     background-color:#FF9732;
@@ -37,6 +49,9 @@ export const ProfileDetails = styled.div`
 `
 
 export const MatchButtons = styled.div`
+    @media (min-width: 500px) {
+        display: none;
+    }
     background-color:#f9c795;
     display: flex;
     justify-content: space-around;
@@ -52,6 +67,9 @@ export const MatchButtons = styled.div`
 `
 
 export const FooterMatches = styled.div`
+    @media (min-width: 500px) {
+        display: none;
+    }
     display:flex;
     background-color: #FF9732;
     color:white;
@@ -66,6 +84,9 @@ export const FooterMatches = styled.div`
 `
 
 export const BioText = styled.div`
+    @media (min-width: 500px) {
+        display: none;
+    }
     display:flex;
     background-color: #f9c795;
     height: 13vh;
@@ -88,6 +109,83 @@ export const ProfileToChoose = styled.div`
     flex-direction: column;
     height: 90vh;
     background-color: #f9c795;
+    @media (min-width: 500px) {
+        display: none;
+    }
     
     
+`
+export const MatchDiv = styled.div`
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top:1vh;
+    margin-bottom: 1vh;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+    background-color: #f9c795 ;
+    
+    img {
+        object-fit: cover;
+        min-width:20vw;
+        max-width:20vw;
+        border-radius: 90%; 
+        max-height: 10vh;
+        min-height: 10vh;
+        margin-right:3vw;
+        margin-left: 3vw;
+        }
+
+    span {
+        margin-left:1vw;
+        margin-right: auto;
+    }
+    @media (min-width: 500px) {
+        display: none;
+    }
+`
+
+export const MatchesList = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-content: flex-start;
+    height: 80vh;
+    background-color: #ff9f3f;
+    overflow-y: auto;
+    @media (min-width: 500px) {
+        display: none;
+    }
+`
+export const BackButton = styled.div`
+    background: #F77D24;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Sans-serif;
+    font-size: 18px;
+    height: 4.5vh;
+    width:100%;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 2vh;
+    border-width: 1vw;
+    border-color: #fff;
+    
+
+    img {
+        max-width: 10vw;
+    }
+    @media (min-width: 500px) {
+        display: none;
+    }
+`
+
+export const Warning = styled.h1`
+    display:none;
+    @media (min-width: 500px) {
+        display: inline-block;
+        font-size: 50px;
+    }
 `

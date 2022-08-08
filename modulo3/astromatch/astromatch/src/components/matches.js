@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { BackButton, MatchDiv, MatchesList } from './style';
 
 
 export function Matches (props){
@@ -35,16 +36,18 @@ export function Matches (props){
     const renderMatches = matchList.map(callbackMatches)
 
     function callbackMatches (object, index) {
-        return <li key = {index}>{object.name} - {object.age}</li>
+        return <MatchDiv key = {index}>
+                <img src={object.photo}/>
+                <span>{object.name} - {object.age}</span>
+            </MatchDiv>
     }
 
     return(
     <div>
-        <h1>Matches</h1>
-        <ul>
+        <MatchesList>
         {renderMatches}
-        </ul>
-        <button onClick={clearMatches}>Cansou dessa gente toda? Clique Aqui</button>
+        </MatchesList>
+        <BackButton onClick={clearMatches}>Limpar Seus Matches</BackButton>
     </div>
     );
 

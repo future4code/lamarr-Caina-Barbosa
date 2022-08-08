@@ -4,7 +4,8 @@ import { useEffect, useState } from 'react';
 import { Profile } from './components/profile';
 import { Matches } from './components/matches';
 import './App.css';
-import { FooterMatches, Header } from './components/style';
+import { BackButton, FooterMatches, Header, Warning } from './components/style';
+import GlobalStyle from './components/style';
 
 function App() {
   const [control, setControl] = useState(0)
@@ -43,13 +44,17 @@ function App() {
   if(curScreen) {
     return (
       <div>
+      <Warning>ESTE SITE NÃO FOI OTIMIZADO PARA DESKTOP. POR FAVOR ACESSAR DE UM MOBILE OU USAR O DEVTOOLS PARA SIMULAR UM APARELHO DE RESOLUÇÃO HORIZONTAL MENOR QUE 500px - RECOMENDADO  IPHONE 12 OU GALAXY S20</Warning>
+      <Header>Matches</Header>
       <Matches/>
-      <button onClick = {switchScreen} > Me mostre mais perfis! </button>
+      <BackButton onClick = {switchScreen} > Me mostre mais perfis! 
+      </BackButton>
       </div>
     )
   }else {
     return (
       <div className="App">
+        <Warning>ESTE SITE NÃO FOI OTIMIZADO PARA DESKTOP. POR FAVOR ACESSAR DE UM MOBILE OU USAR O DEVTOOLS PARA SIMULAR UM APARELHO DE RESOLUÇÃO HORIZONTAL MENOR QUE 500px - RECOMENDADO  IPHONE 12 OU GALAXY S20</Warning>
         <Header>astroMatch</Header>
         {curProfile}
         <FooterMatches onClick = {switchScreen}>Clique Aqui Pra Ver Seus Matches</FooterMatches>    
