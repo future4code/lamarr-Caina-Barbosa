@@ -29,18 +29,19 @@ app.get("/users", (req, res) => {
     res.send(users)
 })
 
-//Exercício 8 - Ordem trocada com o exercício 7 por motivos de rotas e etc
+//Exercício 5 e 6
+// Ver arquivos types.ts e variables.ts
+
+//Exercício 7 e 8
 
 app.get("/posts", (req, res) => {          
-    let userId = Number(req.query.userId)
-    let arrayPosts = posts.filter((post) => post.userId === userId)
-    res.send(arrayPosts)
-})
-
-//Exercício 7
-
-app.get("/posts", (req, res) => {          
-    res.send(posts)
+    let userId = req.query.userId ? Number(req.query.userId) : 0
+    if (userId) {
+        let arrayPosts = posts.filter((post) => post.userId === userId)
+        res.send(arrayPosts)
+    } else {
+        res.send(posts)
+    }
 })
 
 //Exercício 9

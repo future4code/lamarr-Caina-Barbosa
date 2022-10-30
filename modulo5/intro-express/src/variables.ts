@@ -9,7 +9,7 @@ export let users : User[] = [
     {id: 3, name: "Sofia Manzano", phone: "2121", email : "sofia@pcb.com", website: "pcb.org.br"}
 ]
 
-// Exercício 5
+// Exercício 6
 
 // Acho melhor criar fora do array de usuários. Não apenas por seguir o exemplo do JSONPlaceholder, mas as relações com os usuários podem ser feitas através da propriedade userId.
 // A tipagem fica mais fácil também.
